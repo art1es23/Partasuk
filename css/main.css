@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.main-header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url('../img/main-header__background.jpg');
+    background-size: cover;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.main-wrapper {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    min-height: 60px;
+    text-align: center;
+    background: linear-gradient(to left, #4ecdc4, #556270);
+}
+
+.logo {
+    display: block;
+    font-family: 'Titillium Web', sans-serif;
+    width: 100%;
+    height: 70px;
+    line-height: 1.3em;
+    color: #fff;
+    padding: 15px 10px;
+    font-size: 30px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.navigation {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation__item {
+    display: block;
+    line-height: 2.5em;
+}
+
+.navigation__link {
+    display: block;
+    color: #fff;
+    width: 130px;
+    padding: 15px 10px;
+    text-decoration: none;
+    height: 100%;
+    transition: 0.5s;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.navigation__link:hover {
+    text-decoration: none;
+    background-color: rgba(0, 240, 250, 0.35);
+    color: #fff;
+}
+
+.pay-form {
+    display: block;
+    padding: 13px 10px;
+    line-height: 2.5em;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.pay-form:hover {text-decoration: none;}
+.pay-form span {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+
+.pay-form:hover span {background-color: rgba(0, 240, 250, 0.35);}
+.header {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+.header-wrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.main-title {
+    font-size: 56px;
+    color: #fff;
+}
+
+.main-description {
+    font-size: 20px;
+    color: #fff;
+}
+
+.markets {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.markets__item {
+    display: block;
+    line-height: 2.3em;
+}
+
+.markets__link {
+    display: block;
+    height: 40px;
+    width: 100px;
+    margin: 0 5px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.markets__link:hover {
+    background-color: rgba(0, 240, 250, 0.35);
+    text-decoration: none;
+    color: #fff;
+}
+
+.arrow-wrapper {
+    position: absolute;
+    content: '';
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.arrow {
+    display: block;
+    width: 27px;
+    height: 27px;
+    margin: 0 auto;
+    background-image: url('../img/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: 0.35s;
+}
+
+.arrow:hover {background-image: url('../img/arrow-down-black.svg');}
+.description {
+    width: 100%;
+    padding-top: 100px;
+    background: linear-gradient(to right, #abbaab, #ffffff);
+}
+
+.title {
+    text-align: center;
+    display: block;
+    width: 500px;
+    padding-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+.content {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 500px;
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+
+.price-wrapper {
+    text-align: center;
+    background-color: #fff;
+    margin: 0 5px;
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 1;
+    box-shadow: 0 0 1em rgba(0, 255, 150, 0.25);
+    transition: 0.5s ease all;
+}
+
+.price-wrapper:hover {background-color: rgba(0, 255, 150, 0.05);}
+.price {
+    color: #000;
+    font-size: 32px;
+    margin: 10px 0 15px;
+}
+
+.special {
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.menu-specially {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+.menu-specially__item {
+    position: relative;
+    display: block;
+    font-size: 17px;
+    margin: 5px 0;
+    width: 100%;
+    color: #000;
+    padding-left: 55px;
+}
+
+.menu-specially__item::before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/tick.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 20px;
+}
+
+.special-pay {
+    color: #000;
+    margin: 0 auto;
+    width: 150px;
+    line-height: 2em;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.special-pay:hover {
+    background-color: rgba(0, 255, 150, 0.5);
+    cursor: pointer;
+}
+
+.iphone {
+    padding: 75px 0 30px;
+    text-align: center;
+}
+
+.abilities {
+    width: 100%;
+    padding: 100px 0;
+    background: linear-gradient(to right, #abbaab, #ffffff);
+    text-align: center;
+}
+
+.menu-abilities {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-abilities__item {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+
+.item__logo {
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    background-image: url('../img/tick.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.item__title {
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+}
+
+.item__description {opacity: 0.75;}
+.gallery {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery__title {
+    margin: 0 auto;
+    font-size: 35px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.gallery__content {
+    display: block;
+    margin: 0 auto;
+    font-size: 17px;
+    padding-bottom: 50px;
+}
+
+.gallery-content-wrapper {
+    display: block;
+    width: 100%;
+    height: 220px;
+    position: relative;
+}
+
+.gallery-content-wrapper:hover::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.25);
+    background-image: url('../img/search-plus.svg');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gallery-content-wrapper img {box-shadow: 0 0 1em rgba(0, 255, 150, 0.25);}
+.calculator {
+    width: 100%;
+    padding: 75px 0;
+    min-height: 300px;
+    text-align: center;
+    background-image: url('../img/calculator__background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.calculator::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.calculator-wrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 10px;
+    position: relative;
+}
+
+.calculator__count {
+    display: block;
+    font-size: 46px;
+    color: #fff;
+}
+
+.calculator__legend {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.image {
+    background: linear-gradient(to right, #abbaab, #ffffff);
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/nthg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    background: linear-gradient(to left, #4ecdc4, #556270);
+}
+
+.form-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.input {
+    width: 450px;
+    height: 50px;
+    margin: 15px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    background-color: rgba(0, 255, 150, 0.15);
+    transition: 0.5s ease all;
+}
+
+.input:focus {
+    outline: 3px solid rgba(0, 255, 150, 0.5);
+    background-color: #fff;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 50px;
+    transition: 0.5s;
+    background-color: rgba(0, 255, 150, 0.5);
+}
+
+.button:hover {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 15px;
+    height: 200px;
+    margin: 20px 0;
+}
+
+.contact__logo {
+    margin: 0 auto;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.contact__title {
+    display: block;
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+.contact__legend {
+    display: block;
+    margin-top: 5px;
+}
+
+.menu-social {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+.menu-social__link {
+    display: block;
+    font-size: 0;
+    margin: 0 25px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s ease all;
+}
+
+.fb {background-image: url('../img/facebook-square.svg')}
+.tw {background-image: url('../img/twitter-square.svg')}
+.ig {background-image: url('../img/instagram.svg')}
+.tg {background-image: url('../img/telegram.svg')}
+.fb:hover {background-image: url('../img/facebook-square-hover.svg')}
+.tw:hover {background-image: url('../img/twitter-square-hover.svg')}
+.ig:hover {background-image: url('../img/instagram-hover.svg')}
+.tg:hover {background-image: url('../img/telegram-hover.svg')}
+
+.copyright {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
